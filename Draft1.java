@@ -10,7 +10,7 @@ public class Draft1 {
         while(true){
             System.out.println("Enter where you want to place your sign from 1 to 9: ");
             int playerPosition = sc.nextInt();
-            while(playerPositions.contains(playerPosition) || computerPositions.contains(playerPosition)){
+            while(playerPositions.contains(playerPosition) || computerPositions.contains(playerPosition)){ // maybe change this to if? If I put in a value where somethign already is it just kept going on and on because there was no stopping place.
                 System.out.println("position taken. enter another position");
                 playerPosition = sc.nextInt();
             }
@@ -93,9 +93,9 @@ public class Draft1 {
 
         List<List>winning = new ArrayList<List>();
 
-        winning.add(firstRow);
-        winning.add(midRow);
-        winning.add(lastRow);
+        winning.add(firstRow); //I noticed that the program says that you win even if you didn't as long as there was a line with some values. 
+        winning.add(midRow); //I'm wondering if you can change it so it it looks at the values in the spots and not just if there is something there.
+        winning.add(lastRow); // maybe you could do them as arrays and then check the value?
         winning.add(firstColumn);
         winning.add(secondColumn);
         winning.add(thirdColumn);
